@@ -18,6 +18,7 @@ public class Image {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
 
     private String imageName;
     private Instant createTime;
