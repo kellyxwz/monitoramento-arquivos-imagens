@@ -3,6 +3,7 @@ package com.example.demo.controller;
 import com.example.demo.dto.ImageResponseDTO;
 import com.example.demo.service.ImageService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,6 +19,7 @@ public class ImageController {
         this.imageService = imageService;
     }
 
+    @GetMapping
     public ResponseEntity<List<ImageResponseDTO>> findAll(){
         List list = imageService.findAll();
 
